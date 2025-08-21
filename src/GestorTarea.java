@@ -68,7 +68,7 @@ public class GestorTarea {
         return incompletas;
     }
 
-    // FUNCIONES DE ARCHIVO //
+                                                        // FUNCIONES DE ARCHIVO //
 
     private void guardarTareasEnArchivo() { //GUARDAR
         try (BufferedWriter cargar = new BufferedWriter(new FileWriter("tareas.txt"))) {
@@ -80,7 +80,7 @@ public class GestorTarea {
             System.out.println("Error al guardar las tareas en el archivo: " + e.getMessage());
         }
     }
-    private void cargarTareasDelArchivo(){
+    private void cargarTareasDelArchivo(){ //CARGAR
         try(BufferedReader leer = new BufferedReader(new FileReader("tareas.txt"))){
             String line;
             while((line = leer.readLine()) != null){
